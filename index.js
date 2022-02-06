@@ -127,13 +127,19 @@ btn_start.addEventListener('click', () => {
   learnWords.style.display = 'block'
   let dbInoArr = getAll('inoWords')
   randomWord.textContent = dbInoArr[Math.floor(Math.random() * dbInoArr.length)]
+  if (getAll('inoWords').length === 0 && getAll('rusWords').length === 0) {
+    randomWord.textContent = 'Нет слов для проверки'
+  }
 })
 
 btn_check.addEventListener('click', (e) => {
   e.preventDefault()
   inputTranslateText = inputTranslate.value.trim().toLowerCase()
 
-  if (
+  if (getAll('inoWords').length === 0 && getAll('rusWords').length === 0) {
+    randomWord.textContent = 'Нет слов для проверки'
+    inputTranslate.value = ''
+  } else if (
     getAll('inoWords').indexOf(randomWord.textContent) ===
     getAll('rusWords').indexOf(inputTranslateText)
   ) {
