@@ -47,6 +47,14 @@ let showWords = document.querySelector('.showWords')
 let learnWords = document.querySelector('.learnWords')
 // Словарь
 let ul = document.querySelector('.list')
+// Алерты
+$('.alert-success').fadeOut(0, () => {
+  $('.alert-success').css('display', 'none')
+})
+
+$('.alert-danger').fadeOut(0, () => {
+  $('.alert-danger').css('display', 'none')
+})
 
 // Случайное английское слово
 let randomWord = document.querySelector('.randomWord')
@@ -144,12 +152,26 @@ btn_check.addEventListener('click', (e) => {
     getAll('rusWords').indexOf(inputTranslateText)
   ) {
     let dbInoArr = getAll('inoWords')
-    alert('Перевод верный')
+    $('.alert-success').fadeIn(500, () => {
+      $('.alert-success').css('display', 'block')
+    })
+    setTimeout(() => {
+      $('.alert-success').fadeOut(500, () => {
+        $('.alert-success').css('display', 'none')
+      })
+    }, 1000)
     randomWord.textContent =
       dbInoArr[Math.floor(Math.random() * dbInoArr.length)]
     inputTranslate.value = ''
   } else {
-    alert('Попробуй снова')
+    $('.alert-danger').fadeIn(500, () => {
+      $('.alert-danger').css('display', 'block')
+    })
+    setTimeout(() => {
+      $('.alert-danger').fadeOut(500, () => {
+        $('.alert-danger').css('display', 'none')
+      })
+    }, 1000)
   }
 })
 
