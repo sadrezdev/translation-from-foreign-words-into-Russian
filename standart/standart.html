@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="standart.css" />
+  </head>
+  <body>
+    <div class="container addWords">
+      <h1>Добавление слов в тренажер</h1>
+      <div class="form-group col-md-3">
+        <label for="usr">Иностранное:</label>
+        <input type="text" class="form-control" id="inoWord" />
+      </div>
+      <div class="form-group col-md-3">
+        <label for="pwd">Русское:</label>
+        <input type="text" class="form-control" id="rusWord" />
+      </div>
+
+      <div class="form-group col-md-3">
+        <button class="btn btn-success btn-add">Добавить</button>
+        <button class="btn btn-secondary btn-remember">Переводы</button>
+        <a href="../index.html">
+          <button class="btn btn-success">Вернуться к выбору</button>
+        </a>
+      </div>
+    </div>
+    <div class="container showWords">
+      <h1>Список иностранных слов и их перевод:</h1>
+      <ul class="list"></ul>
+      <button class="btn btn-success btn-toaddWords">
+        Добавить новых слов
+      </button>
+      <button class="btn btn-success btn-start">Начать учить</button>
+    </div>
+
+    <div class="container learnWords">
+      <h2 class="randomWord"></h2>
+      <h3 class="wordTranslate"></h3>
+      <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="inputTranslate" />
+        <input
+          type="submit"
+          value="Проверить"
+          class="btn btn-success"
+          id="btn-check"
+        />
+        <button class="btn btn-secondary btn-showTranslate">
+          Показать перевод
+        </button>
+        <button class="btn btn-success btn-closePractice">
+          Вернуться к словам
+        </button>
+      </div>
+      <div class="alert alert-success" role="alert" style="margin-top: 15px">
+        Перевод верный
+      </div>
+      <div class="alert alert-danger" role="alert">Перевод неверный</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../indexfunctions.js"></script>
+    <script src="standart.js"></script>
+  </body>
+</html>

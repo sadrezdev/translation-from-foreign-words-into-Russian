@@ -1,0 +1,21 @@
+.showWords {
+  display: none;
+}
+
+.learnWords {
+  display: none;
+}
+
+.del-btn {
+  margin-left: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
