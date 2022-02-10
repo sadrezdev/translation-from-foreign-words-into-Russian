@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+a {
+  float: left;
+}
+
+.window {
+  width: 600px;
+  height: 600px;
+  border: 1px solid gray;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rusWord {
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.inoLetters {
+  justify-content: center;
+}
+
+.inoLetter {
+  width: 30px;
+  height: 50px;
+  margin: 5px 5px 5px 5px;
+}
+
+.checkLetter {
+  width: 130px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid green;
+  background-color: #00ff7f;
+  font-family: Roboto;
+  font-weight: 400;
+  color: white;
+}
+
+.checkLetter:active {
+  width: 120px;
+  height: 40px;
+  border-radius: 40px;
+  border: 2px solid green;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.inoLetter {
+  font-size: 36px;
+}
